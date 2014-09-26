@@ -26,7 +26,7 @@ Element_DEST::Element_DEST()
 	
 	Weight = 101;
 	
-	Temperature = R_TEMP+0.0f	+273.15f;
+	Temperature = R_TEMP+9000.0f	+273.15f;
 	HeatConduct = 150;
 	Description = "More destructive Bomb, can break through virtually anything.";
 	
@@ -56,7 +56,7 @@ int Element_DEST::update(UPDATE_FUNC_ARGS)
 		return 1;
 
 	r = pmap[y+ry][x+rx];
-	if (!r || (r&0xFF)==PT_DEST || (r&0xFF)==PT_DMND || (r&0xFF)==PT_BCLN  || (r&0xFF)==PT_CLNE  || (r&0xFF)==PT_PCLN  || (r&0xFF)==PT_PBCN)
+	if (!r || (r&0xFF)==PT_DEST)
 		return 0;
 
 	if (parts[i].life<=0 || parts[i].life>37)
