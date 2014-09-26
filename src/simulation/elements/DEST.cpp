@@ -12,7 +12,7 @@ Element_DEST::Element_DEST()
 	Advection = -0.05f;
 	AirDrag = 0.00f * CFDS;
 	AirLoss = 0.95f;
-	Loss = 0.95f;
+	Loss = 0.9999999f;
 	Collision = -0.1f;
 	Gravity = 0.4f;
 	Diffusion = 0.00f;
